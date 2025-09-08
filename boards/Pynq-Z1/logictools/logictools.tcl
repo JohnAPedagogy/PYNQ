@@ -58,7 +58,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2024.1
+set scripts_vivado_version 2025.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -2103,6 +2103,7 @@ proc create_root_design { parentCell } {
 
   variable script_folder
   variable design_name
+  global overlay_name
 
   if { $parentCell eq "" } {
      set parentCell [get_bd_cells /]
@@ -3198,7 +3199,7 @@ proc create_root_design { parentCell } {
   current_bd_instance $oldCurInst
 
   # Create PFM attributes
-  set_property PFM_NAME {xilinx.com:xd:${overlay_name}:1.0} [get_files [current_bd_design].bd]
+  set_property PFM_NAME "xilinx.com:xd:${overlay_name}:1.0" [get_files [current_bd_design].bd]
   set_property PFM.CLOCK { \
     FCLK_CLK0 {id "0" is_default "true" \
     	proc_sys_reset "rst_ps7_0_fclk0" status "fixed"} \

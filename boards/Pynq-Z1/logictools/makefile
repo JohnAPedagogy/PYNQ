@@ -22,4 +22,5 @@ check_timing:
 	vivado -mode batch -source check_timing.tcl -notrace
 
 clean:
-	rm -rf $(overlay_name) *.jou *.log NA .Xil
+	-chmod -R u+w $(overlay_name) NA 2>/dev/null
+	-rm -rf $(overlay_name) *.jou *.log NA .Xil
