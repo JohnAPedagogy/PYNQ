@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1757273298">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="logictools_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="logictools_wrapper_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="logictools_wrapper.vdi"/>
+  <File Type="BG-DRC" Name="logictools_wrapper.drc"/>
+  <File Type="BG-BGN" Name="logictools_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="logictools_wrapper.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="logictools_wrapper.ltx"/>
+  <File Type="PL-LTX-FILE" Name="logictools_wrapper_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="logictools_wrapper_boot.ltx"/>
+  <File Type="LTX-FILE" Name="logictools_wrapper.ltx"/>
+  <File Type="PL-BIF-FILE" Name="logictools_wrapper_pld.bif"/>
+  <File Type="PA-TCL" Name="logictools_wrapper.tcl"/>
+  <File Type="INIT-TIMING" Name="logictools_wrapper_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="logictools_wrapper_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="logictools_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="logictools_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="logictools_wrapper_drc_opted.rpt"/>
+  <File Type="MARKER-RNPI-FILE" Name="logictools_wrapper_markers.rnpi"/>
+  <File Type="OPT-UTIL" Name="logictools_wrapper_utilization_opted.rpt"/>
+  <File Type="BITSTR-NKY" Name="logictools_wrapper.nky"/>
+  <File Type="OPT-UTIL-PB" Name="logictools_wrapper_utilization_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="logictools_wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="logictools_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="logictools_wrapper.hwdef"/>
+  <File Type="BOOT_RNPI_FILE" Name="logictools_wrapper_boot.rnpi"/>
+  <File Type="OPT-RQA-PB" Name="logictools_wrapper_rqa_opted.pb"/>
+  <File Type="PWROPT-DCP" Name="logictools_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="logictools_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="logictools_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="logictools_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="logictools_wrapper_io_placed.rpt"/>
+  <File Type="PL_RNPI_FILE" Name="logictools_wrapper_pld.rnpi"/>
+  <File Type="PLACE-CLK" Name="logictools_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="logictools_wrapper_boot_markers.rnpi"/>
+  <File Type="PLACE-UTIL" Name="logictools_wrapper_utilization_placed.rpt"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="logictools_wrapper_pld_markers.rnpi"/>
+  <File Type="PLACE-UTIL-PB" Name="logictools_wrapper_utilization_placed.pb"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="logictools_wrapper_pld_mask.rnpi"/>
+  <File Type="PLACE-CTRL" Name="logictools_wrapper_control_sets_placed.rpt"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="logictools_wrapper_pld_shutdown.rnpi"/>
+  <File Type="PLACE-SIMILARITY" Name="logictools_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="logictools_wrapper_pld_unmask.rnpi"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="logictools_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="logictools_wrapper_pld_clear.rcdo"/>
+  <File Type="PLACE-TIMING" Name="logictools_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="logictools_wrapper_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="logictools_wrapper_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="logictools_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="logictools_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="logictools_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="logictools_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="logictools_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="logictools_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="logictools_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-UTIL" Name="logictools_wrapper_utilization_routed.rpt"/>
+  <File Type="BITSTR-RBT" Name="logictools_wrapper.rbt"/>
+  <File Type="ROUTE-UTIL-PB" Name="logictools_wrapper_utilization_routed.pb"/>
+  <File Type="BITSTR-BMM" Name="logictools_wrapper_bd.bmm"/>
+  <File Type="ROUTE-DRC" Name="logictools_wrapper_drc_routed.rpt"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="logictools_wrapper_pld_markers.rcdo"/>
+  <File Type="ROUTE-DRC-PB" Name="logictools_wrapper_drc_routed.pb"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="logictools_wrapper_pld_mask.rcdo"/>
+  <File Type="ROUTE-DRC-RPX" Name="logictools_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="logictools_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="logictools_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="logictools_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="logictools_wrapper_power_routed.rpt"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="logictools_wrapper_pld_unmask_markers.rcdo"/>
+  <File Type="ROUTE-PWR-SUM" Name="logictools_wrapper_power_summary_routed.pb"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="logictools_wrapper_pld_unmask.rcdo"/>
+  <File Type="ROUTE-PWR-RPX" Name="logictools_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="logictools_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="logictools_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="logictools_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="logictools_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="logictools_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="logictools_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="logictools_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="logictools_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="logictools_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="logictools_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="logictools_wrapper_rqs_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="logictools_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="logictools_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="logictools_wrapper.bit"/>
+  <File Type="BG-BIN" Name="logictools_wrapper.bin"/>
+  <File Type="BITSTR-MSK" Name="logictools_wrapper.msk"/>
+  <File Type="PDI-FILE" Name="logictools_wrapper.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="logictools_wrapper_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="logictools_wrapper_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="logictools_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="logictools_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="logictools_wrapper.rnpi"/>
+  <File Type="RCDO-FILE" Name="logictools_wrapper.rcdo"/>
+  <File Type="MARKER-RCDO-FILE" Name="logictools_wrapper_markers.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="logictools_wrapper_pld.rcdo"/>
+  <File Type="NPI_FILE" Name="logictools_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="logictools_wrapper.rbd"/>
+  <File Type="MMI-FILE" Name="logictools_wrapper.mmi"/>
+  <File Type="BIF-FILE" Name="logictools_wrapper.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="logictools_wrapper_boot.bif"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/logictools/logictools.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/logictools/hdl/logictools_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="logictools_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/logictools.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../vivado/constraints/logictools.xdc"/>
+        <Attr Name="ImportTime" Val="1756489871"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_controllers_reg_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_rst_ps7_0_fclk0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_ps7_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_dff_en_reset_vector_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_trace_control_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_boolean_generator_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_trace_cntrl_64_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axis_data_fifo_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_mem_intercon_1_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_pattern_nsamples_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_pattern_generator_mem_tri_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_intc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_pattern_data_bram_ctrl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_interface_switch_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_intr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_io_switch_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_distributor_arduino_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_ps7_0_axi_periph_imp_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_pattern_tri_bram_ctrl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_dlmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_lmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_microblaze_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_bram_ctrl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_pattern_mem_data_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_system_interrupts_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_rst_clk_wiz_1_100M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_axi_periph_imp_auto_cc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_rst_clk_wiz_1_100M_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_fsm_bram_rst_addr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_fsm_bram_ctrl_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_microblaze_0_axi_periph_imp_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_spi_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_iic_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_function_sel_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_mem_intercon_imp_auto_ds_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_ilmb_v10_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_timer_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_lmb_bram_if_cntlr_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_fsm_io_switch_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_rst_ps7_0_fclk1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_ps7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_lmb_bram_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_cdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_timer_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mux_vector_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_bram_ctrl_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_gpio_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_dff_en_reset_vector_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_pattern_control_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_io_switch_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_intr_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_bram_ctrl_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mux_vector_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_dlmb_v10_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_fsm_generator_mem_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_intc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_ilmb_v10_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_debouncer_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_mem_intercon_imp_auto_ds_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_ps7_0_axi_periph_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_gpio_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_debouncer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_debouncer_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_mem_intercon_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_dff_en_reset_vector_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_mb_axi_periph_imp_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_mem_intercon_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_axi_mem_intercon_imp_auto_ds_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_ilmb_v10_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_iic_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_debouncer_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_spi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_lmb_bram_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_intr_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_dlmb_v10_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_lmb_bram_if_cntlr_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="logictools_fsm_controller_0"/>
+</GenRun>

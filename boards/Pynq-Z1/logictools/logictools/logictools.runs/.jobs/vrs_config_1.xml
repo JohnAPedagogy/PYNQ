@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="logictools_ilmb_v10_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_ilmb_v10_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_lmb_bram_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_lmb_bram_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_lmb_bram_if_cntlr_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_lmb_bram_if_cntlr_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mb_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mb_axi_periph_imp_xbar_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_axi_periph_imp_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mb_axi_periph_imp_auto_cc_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_axi_periph_imp_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mb_axi_periph_imp_auto_cc_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_axi_periph_imp_auto_cc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mb_bram_ctrl_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_bram_ctrl_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_timer_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_timer_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_dff_en_reset_vector_0_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_dff_en_reset_vector_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_iic_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_iic_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_gpio_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_gpio_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_microblaze_0_axi_periph_imp_xbar_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_microblaze_0_axi_periph_imp_xbar_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_fsm_bram_ctrl_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_fsm_bram_ctrl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_fsm_bram_rst_addr_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_fsm_bram_rst_addr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_timer_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_timer_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_timer_0_synth_1"/>
+	</Run>
+	<Run Id="logictools_spi_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_spi_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_rst_clk_wiz_1_100M_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_rst_clk_wiz_1_100M_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mb_bram_ctrl_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_bram_ctrl_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_mb_bram_ctrl_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_mb_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_mb_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_rst_ps7_0_fclk1_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_rst_ps7_0_fclk1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_system_interrupts_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_system_interrupts_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_io_switch_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_io_switch_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_intr_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_intr_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_intc_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_intc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_debouncer_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_debouncer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_debouncer_1_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_debouncer_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_debouncer_0_0_synth_1"/>
+	</Run>
+	<Run Id="logictools_debouncer_2_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_debouncer_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_debouncer_0_0_synth_1"/>
+	</Run>
+	<Run Id="logictools_debouncer_3_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_debouncer_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_debouncer_0_0_synth_1"/>
+	</Run>
+	<Run Id="logictools_mux_vector_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mux_vector_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_axi_cdma_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_cdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_axi_mem_intercon_imp_xbar_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_mem_intercon_imp_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_axi_mem_intercon_imp_auto_pc_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_mem_intercon_imp_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_axi_mem_intercon_imp_auto_ds_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_mem_intercon_imp_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_dlmb_v10_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_dlmb_v10_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_ilmb_v10_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_ilmb_v10_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_ilmb_v10_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_ilmb_v10_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_lmb_bram_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_lmb_bram_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_lmb_bram_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_intr_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_intr_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_intr_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_lmb_bram_if_cntlr_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_lmb_bram_if_cntlr_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_lmb_bram_if_cntlr_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_dlmb_v10_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_dlmb_v10_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_ilmb_v10_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_dff_en_reset_vector_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_dff_en_reset_vector_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_dff_en_reset_vector_0_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_gpio_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_gpio_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_gpio_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_fsm_io_switch_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_fsm_io_switch_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_fsm_generator_mem_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_fsm_generator_mem_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_fsm_controller_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_fsm_controller_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_spi_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_spi_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_spi_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_mb_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_mb_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_mb_bram_ctrl_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mb_bram_ctrl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_mb_bram_ctrl_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_microblaze_0_axi_periph_imp_xbar_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_microblaze_0_axi_periph_imp_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_microblaze_0_axi_periph_imp_xbar_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_rst_clk_wiz_1_100M_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_rst_clk_wiz_1_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_rst_clk_wiz_1_100M_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_lmb_bram_if_cntlr_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_lmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_lmb_bram_if_cntlr_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_lmb_bram_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_lmb_bram_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_ilmb_v10_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_ilmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_ilmb_v10_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_dlmb_v10_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_dlmb_v10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_ilmb_v10_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_io_switch_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_io_switch_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_io_switch_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_intr_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_intr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_intr_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_interface_switch_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_interface_switch_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_function_sel_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_function_sel_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_intc_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_intc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_pattern_control_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_pattern_control_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_pattern_data_bram_ctrl_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_pattern_data_bram_ctrl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_pattern_generator_mem_tri_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_pattern_generator_mem_tri_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_lmb_bram_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_pattern_mem_data_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_pattern_mem_data_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_lmb_bram_2_synth_1"/>
+	</Run>
+	<Run Id="logictools_pattern_nsamples_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_pattern_nsamples_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_pattern_tri_bram_ctrl_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_pattern_tri_bram_ctrl_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_pattern_data_bram_ctrl_0_synth_1"/>
+	</Run>
+	<Run Id="logictools_rst_clk_wiz_1_100M_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_rst_clk_wiz_1_100M_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_rst_clk_wiz_1_100M_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_axi_dma_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_axi_mem_intercon_1_imp_auto_pc_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_mem_intercon_1_imp_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_axis_data_fifo_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axis_data_fifo_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_trace_cntrl_64_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_trace_cntrl_64_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_trace_control_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_trace_control_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mdm_1_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mdm_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_ps7_0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_ps7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_ps7_0_axi_periph_imp_xbar_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_ps7_0_axi_periph_imp_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_ps7_0_axi_periph_imp_auto_pc_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_ps7_0_axi_periph_imp_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_ps7_0_axi_periph_imp_auto_pc_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_ps7_0_axi_periph_imp_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_rst_ps7_0_fclk0_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_rst_ps7_0_fclk0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_intc_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_intc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_intc_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_iic_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_iic_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_iic_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_distributor_arduino_gpio_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_distributor_arduino_gpio_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_dff_en_reset_vector_0_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_dff_en_reset_vector_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_dff_en_reset_vector_0_1_synth_1"/>
+	</Run>
+	<Run Id="logictools_controllers_reg_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_controllers_reg_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_mux_vector_0_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_mux_vector_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_boolean_generator_0_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_boolean_generator_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="logictools_axi_mem_intercon_imp_auto_ds_2_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_mem_intercon_imp_auto_ds_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="logictools_axi_mem_intercon_imp_auto_ds_1_synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/logictools_axi_mem_intercon_imp_auto_ds_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="logictools_ilmb_v10_2_synth_1"/>
+		<Parent Id="logictools_lmb_bram_2_synth_1"/>
+		<Parent Id="logictools_lmb_bram_if_cntlr_2_synth_1"/>
+		<Parent Id="logictools_mb_2_synth_1"/>
+		<Parent Id="logictools_mb_axi_periph_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_mb_axi_periph_imp_auto_cc_0_synth_1"/>
+		<Parent Id="logictools_mb_axi_periph_imp_auto_cc_1_synth_1"/>
+		<Parent Id="logictools_mb_bram_ctrl_2_synth_1"/>
+		<Parent Id="logictools_timer_0_synth_1"/>
+		<Parent Id="logictools_dff_en_reset_vector_0_1_synth_1"/>
+		<Parent Id="logictools_iic_1_synth_1"/>
+		<Parent Id="logictools_gpio_1_synth_1"/>
+		<Parent Id="logictools_microblaze_0_axi_periph_imp_xbar_1_synth_1"/>
+		<Parent Id="logictools_fsm_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_fsm_bram_rst_addr_0_synth_1"/>
+		<Parent Id="logictools_timer_1_synth_1"/>
+		<Parent Id="logictools_spi_1_synth_1"/>
+		<Parent Id="logictools_rst_clk_wiz_1_100M_1_synth_1"/>
+		<Parent Id="logictools_mb_bram_ctrl_1_synth_1"/>
+		<Parent Id="logictools_mb_1_synth_1"/>
+		<Parent Id="logictools_rst_ps7_0_fclk1_0_synth_1"/>
+		<Parent Id="logictools_system_interrupts_0_synth_1"/>
+		<Parent Id="logictools_io_switch_1_synth_1"/>
+		<Parent Id="logictools_intr_1_synth_1"/>
+		<Parent Id="logictools_intc_1_synth_1"/>
+		<Parent Id="logictools_debouncer_0_0_synth_1"/>
+		<Parent Id="logictools_debouncer_1_0_synth_1"/>
+		<Parent Id="logictools_debouncer_2_0_synth_1"/>
+		<Parent Id="logictools_debouncer_3_0_synth_1"/>
+		<Parent Id="logictools_mux_vector_0_0_synth_1"/>
+		<Parent Id="logictools_axi_cdma_0_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_pc_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_ds_0_synth_1"/>
+		<Parent Id="logictools_dlmb_v10_1_synth_1"/>
+		<Parent Id="logictools_ilmb_v10_1_synth_1"/>
+		<Parent Id="logictools_lmb_bram_1_synth_1"/>
+		<Parent Id="logictools_intr_2_synth_1"/>
+		<Parent Id="logictools_lmb_bram_if_cntlr_1_synth_1"/>
+		<Parent Id="logictools_dlmb_v10_2_synth_1"/>
+		<Parent Id="logictools_dff_en_reset_vector_0_0_synth_1"/>
+		<Parent Id="logictools_gpio_0_synth_1"/>
+		<Parent Id="logictools_fsm_io_switch_0_synth_1"/>
+		<Parent Id="logictools_fsm_generator_mem_0_synth_1"/>
+		<Parent Id="logictools_fsm_controller_0_synth_1"/>
+		<Parent Id="logictools_spi_0_synth_1"/>
+		<Parent Id="logictools_mb_0_synth_1"/>
+		<Parent Id="logictools_mb_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_microblaze_0_axi_periph_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_rst_clk_wiz_1_100M_0_synth_1"/>
+		<Parent Id="logictools_lmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="logictools_lmb_bram_0_synth_1"/>
+		<Parent Id="logictools_ilmb_v10_0_synth_1"/>
+		<Parent Id="logictools_dlmb_v10_0_synth_1"/>
+		<Parent Id="logictools_io_switch_0_synth_1"/>
+		<Parent Id="logictools_intr_0_synth_1"/>
+		<Parent Id="logictools_interface_switch_0_synth_1"/>
+		<Parent Id="logictools_function_sel_0_synth_1"/>
+		<Parent Id="logictools_intc_2_synth_1"/>
+		<Parent Id="logictools_pattern_control_0_synth_1"/>
+		<Parent Id="logictools_pattern_data_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_pattern_generator_mem_tri_0_synth_1"/>
+		<Parent Id="logictools_pattern_mem_data_0_synth_1"/>
+		<Parent Id="logictools_pattern_nsamples_0_synth_1"/>
+		<Parent Id="logictools_pattern_tri_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_rst_clk_wiz_1_100M_2_synth_1"/>
+		<Parent Id="logictools_axi_dma_0_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_1_imp_auto_pc_0_synth_1"/>
+		<Parent Id="logictools_axis_data_fifo_0_0_synth_1"/>
+		<Parent Id="logictools_trace_cntrl_64_0_0_synth_1"/>
+		<Parent Id="logictools_trace_control_0_synth_1"/>
+		<Parent Id="logictools_mdm_1_0_synth_1"/>
+		<Parent Id="logictools_ps7_0_0_synth_1"/>
+		<Parent Id="logictools_ps7_0_axi_periph_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_ps7_0_axi_periph_imp_auto_pc_1_synth_1"/>
+		<Parent Id="logictools_ps7_0_axi_periph_imp_auto_pc_0_synth_1"/>
+		<Parent Id="logictools_rst_ps7_0_fclk0_0_synth_1"/>
+		<Parent Id="logictools_intc_0_synth_1"/>
+		<Parent Id="logictools_iic_0_synth_1"/>
+		<Parent Id="logictools_distributor_arduino_gpio_0_synth_1"/>
+		<Parent Id="logictools_dff_en_reset_vector_0_2_synth_1"/>
+		<Parent Id="logictools_controllers_reg_0_synth_1"/>
+		<Parent Id="logictools_mux_vector_0_1_synth_1"/>
+		<Parent Id="logictools_boolean_generator_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_ds_2_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_ds_1_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/its/yocto/petalinux/PYNQ/boards/Pynq-Z1/logictools/logictools/logictools.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="logictools_ilmb_v10_2_synth_1"/>
+		<Parent Id="logictools_lmb_bram_2_synth_1"/>
+		<Parent Id="logictools_lmb_bram_if_cntlr_2_synth_1"/>
+		<Parent Id="logictools_mb_2_synth_1"/>
+		<Parent Id="logictools_mb_axi_periph_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_mb_axi_periph_imp_auto_cc_0_synth_1"/>
+		<Parent Id="logictools_mb_axi_periph_imp_auto_cc_1_synth_1"/>
+		<Parent Id="logictools_mb_bram_ctrl_2_synth_1"/>
+		<Parent Id="logictools_timer_0_synth_1"/>
+		<Parent Id="logictools_dff_en_reset_vector_0_1_synth_1"/>
+		<Parent Id="logictools_iic_1_synth_1"/>
+		<Parent Id="logictools_gpio_1_synth_1"/>
+		<Parent Id="logictools_microblaze_0_axi_periph_imp_xbar_1_synth_1"/>
+		<Parent Id="logictools_fsm_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_fsm_bram_rst_addr_0_synth_1"/>
+		<Parent Id="logictools_timer_1_synth_1"/>
+		<Parent Id="logictools_spi_1_synth_1"/>
+		<Parent Id="logictools_rst_clk_wiz_1_100M_1_synth_1"/>
+		<Parent Id="logictools_mb_bram_ctrl_1_synth_1"/>
+		<Parent Id="logictools_mb_1_synth_1"/>
+		<Parent Id="logictools_rst_ps7_0_fclk1_0_synth_1"/>
+		<Parent Id="logictools_system_interrupts_0_synth_1"/>
+		<Parent Id="logictools_io_switch_1_synth_1"/>
+		<Parent Id="logictools_intr_1_synth_1"/>
+		<Parent Id="logictools_intc_1_synth_1"/>
+		<Parent Id="logictools_debouncer_0_0_synth_1"/>
+		<Parent Id="logictools_debouncer_1_0_synth_1"/>
+		<Parent Id="logictools_debouncer_2_0_synth_1"/>
+		<Parent Id="logictools_debouncer_3_0_synth_1"/>
+		<Parent Id="logictools_mux_vector_0_0_synth_1"/>
+		<Parent Id="logictools_axi_cdma_0_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_pc_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_ds_0_synth_1"/>
+		<Parent Id="logictools_dlmb_v10_1_synth_1"/>
+		<Parent Id="logictools_ilmb_v10_1_synth_1"/>
+		<Parent Id="logictools_lmb_bram_1_synth_1"/>
+		<Parent Id="logictools_intr_2_synth_1"/>
+		<Parent Id="logictools_lmb_bram_if_cntlr_1_synth_1"/>
+		<Parent Id="logictools_dlmb_v10_2_synth_1"/>
+		<Parent Id="logictools_dff_en_reset_vector_0_0_synth_1"/>
+		<Parent Id="logictools_gpio_0_synth_1"/>
+		<Parent Id="logictools_fsm_io_switch_0_synth_1"/>
+		<Parent Id="logictools_fsm_generator_mem_0_synth_1"/>
+		<Parent Id="logictools_fsm_controller_0_synth_1"/>
+		<Parent Id="logictools_spi_0_synth_1"/>
+		<Parent Id="logictools_mb_0_synth_1"/>
+		<Parent Id="logictools_mb_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_microblaze_0_axi_periph_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_rst_clk_wiz_1_100M_0_synth_1"/>
+		<Parent Id="logictools_lmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="logictools_lmb_bram_0_synth_1"/>
+		<Parent Id="logictools_ilmb_v10_0_synth_1"/>
+		<Parent Id="logictools_dlmb_v10_0_synth_1"/>
+		<Parent Id="logictools_io_switch_0_synth_1"/>
+		<Parent Id="logictools_intr_0_synth_1"/>
+		<Parent Id="logictools_interface_switch_0_synth_1"/>
+		<Parent Id="logictools_function_sel_0_synth_1"/>
+		<Parent Id="logictools_intc_2_synth_1"/>
+		<Parent Id="logictools_pattern_control_0_synth_1"/>
+		<Parent Id="logictools_pattern_data_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_pattern_generator_mem_tri_0_synth_1"/>
+		<Parent Id="logictools_pattern_mem_data_0_synth_1"/>
+		<Parent Id="logictools_pattern_nsamples_0_synth_1"/>
+		<Parent Id="logictools_pattern_tri_bram_ctrl_0_synth_1"/>
+		<Parent Id="logictools_rst_clk_wiz_1_100M_2_synth_1"/>
+		<Parent Id="logictools_axi_dma_0_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_1_imp_auto_pc_0_synth_1"/>
+		<Parent Id="logictools_axis_data_fifo_0_0_synth_1"/>
+		<Parent Id="logictools_trace_cntrl_64_0_0_synth_1"/>
+		<Parent Id="logictools_trace_control_0_synth_1"/>
+		<Parent Id="logictools_mdm_1_0_synth_1"/>
+		<Parent Id="logictools_ps7_0_0_synth_1"/>
+		<Parent Id="logictools_ps7_0_axi_periph_imp_xbar_0_synth_1"/>
+		<Parent Id="logictools_ps7_0_axi_periph_imp_auto_pc_1_synth_1"/>
+		<Parent Id="logictools_ps7_0_axi_periph_imp_auto_pc_0_synth_1"/>
+		<Parent Id="logictools_rst_ps7_0_fclk0_0_synth_1"/>
+		<Parent Id="logictools_intc_0_synth_1"/>
+		<Parent Id="logictools_iic_0_synth_1"/>
+		<Parent Id="logictools_distributor_arduino_gpio_0_synth_1"/>
+		<Parent Id="logictools_dff_en_reset_vector_0_2_synth_1"/>
+		<Parent Id="logictools_controllers_reg_0_synth_1"/>
+		<Parent Id="logictools_mux_vector_0_1_synth_1"/>
+		<Parent Id="logictools_boolean_generator_0_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_ds_2_synth_1"/>
+		<Parent Id="logictools_axi_mem_intercon_imp_auto_ds_1_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+		<Parameter Name="general.usePosixSpawnForFork" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

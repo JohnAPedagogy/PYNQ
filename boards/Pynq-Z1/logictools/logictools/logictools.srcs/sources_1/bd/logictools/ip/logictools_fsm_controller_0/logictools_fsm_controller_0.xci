@@ -1,0 +1,47 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "logictools_fsm_controller_0",
+    "cell_name": "lcp_ar/FSM_generator/fsm_controller",
+    "component_reference": "xilinx.com:user:fsm_controller:1.0",
+    "ip_revision": "3",
+    "gen_directory": "../../../../../../logictools.gen/sources_1/bd/logictools/ip/logictools_fsm_controller_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "logictools_fsm_controller_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "3" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../logictools.gen/sources_1/bd/logictools/ip/logictools_fsm_controller_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2025.1" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk": [ { "direction": "in" } ],
+        "controls_input": [ { "direction": "in", "size_left": "5", "size_right": "0" } ],
+        "reset_n": [ { "direction": "in" } ],
+        "fsm_enb": [ { "direction": "out" } ],
+        "fsm_rst": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source Xilinx tools
-source /home/its/tools/Xilinx/2025.1/settings64.sh
+source /home/its/tools/Xilinx/2025.1/Vivado/settings64.sh
 
 # Export PATH for Vitis HLS
 export PATH=/home/its/tools/Xilinx/2025.1/Vitis/bin/unwrapped/lnx64.o:$PATH
