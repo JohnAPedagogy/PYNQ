@@ -473,7 +473,11 @@ During the build process, several intermediate files are created:
   - Generated RTL (Verilog/VHDL)
   - IP packaging files
   - Simulation and verification files
+#### Windows builds
+```
+%SystemRoot%\system32\cmd.exe /k d:\Xilinx\2025.1/Vivado\bin\vivado.bat -mode tcl
 
+```
 ### Generated Software Components
 
 #### Device Drivers
