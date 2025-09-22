@@ -9,7 +9,16 @@
       "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source update_ip_repo.tcl)",
       "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\update_ip_repo.tcl\")",
       "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\set_top_module.tcl\")",
-      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\fix_block_design.tcl\")"
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\fix_block_design.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\debug_block_design.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\recreate_block_design.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\force_regenerate_design.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\fix_and_regenerate.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\create_design_no_pfm.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\check_run_status.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\complete_implementation.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\check_io_utilization.tcl\")",
+      "Bash(\"d:\\Xilinx\\2025.1\\Vivado\\bin\\vivado.bat\" -mode batch -source \"C:\\work\\dev\\PYNQ\\boards\\Pynq-Z2\\base\\create_arduino_audio_design.tcl\")"
     ],
     "deny": [],
     "ask": []

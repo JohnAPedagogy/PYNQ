@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sun Sep 21 16:52:28 2025
+# Process ID         : 22044
+# Current directory  : C:/work/dev/PYNQ/boards/Pynq-Z2/base/base/base.runs/base_microblaze_0_axi_periph_imp_m02_regslice_6_synth_1
+# Command line       : vivado.exe -log base_microblaze_0_axi_periph_imp_m02_regslice_6.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_microblaze_0_axi_periph_imp_m02_regslice_6.tcl
+# Log file           : C:/work/dev/PYNQ/boards/Pynq-Z2/base/base/base.runs/base_microblaze_0_axi_periph_imp_m02_regslice_6_synth_1/base_microblaze_0_axi_periph_imp_m02_regslice_6.vds
+# Journal file       : C:/work/dev/PYNQ/boards/Pynq-Z2/base/base/base.runs/base_microblaze_0_axi_periph_imp_m02_regslice_6_synth_1\vivado.jou
+# Running On         : GI240817-JohnAlamina
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 PRO 6850H with Radeon Graphics     
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 33592 MB
+# Swap memory        : 99556 MB
+# Total Virtual      : 133148 MB
+# Available Virtual  : 56538 MB
+#-----------------------------------------------------------
+source base_microblaze_0_axi_periph_imp_m02_regslice_6.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 497.684 ; gain = 213.098
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/work/dev/PYNQ/boards/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.1/Vivado/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP base_microblaze_0_axi_periph_imp_m02_regslice_6, cache-ID = b917dd68d773b2a4.
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 21 16:52:47 2025...
