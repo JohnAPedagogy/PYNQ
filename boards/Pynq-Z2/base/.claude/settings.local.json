@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vivado:*)",
+      "Read(//c/Users/John Alamina/AppData/Roaming/Xilinx/Vivado/PYNQ/boards/**)",
+      "Bash(build_ip.bat)",
+      "Bash(cmd /c:*)",
+      "Bash(vitis_hls:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
