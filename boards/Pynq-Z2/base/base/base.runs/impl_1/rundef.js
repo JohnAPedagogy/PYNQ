@@ -9,9 +9,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "d:/Xilinx/2025.1/Vitis/bin;d:/Xilinx/2025.1/Vivado/ids_lite/ISE/bin/nt64;d:/Xilinx/2025.1/Vivado/ids_lite/ISE/lib/nt64;d:/Xilinx/2025.1/Vivado/bin;";
+  PathVal = "D:/Xilinx/2025.1/Vitis/bin;D:/Xilinx/2025.1/Vivado/ids_lite/ISE/bin/nt64;D:/Xilinx/2025.1/Vivado/ids_lite/ISE/lib/nt64;D:/Xilinx/2025.1/Vivado/bin;";
 } else {
-  PathVal = "d:/Xilinx/2025.1/Vitis/bin;d:/Xilinx/2025.1/Vivado/ids_lite/ISE/bin/nt64;d:/Xilinx/2025.1/Vivado/ids_lite/ISE/lib/nt64;d:/Xilinx/2025.1/Vivado/bin;" + PathVal;
+  PathVal = "D:/Xilinx/2025.1/Vitis/bin;D:/Xilinx/2025.1/Vivado/ids_lite/ISE/bin/nt64;D:/Xilinx/2025.1/Vivado/ids_lite/ISE/lib/nt64;D:/Xilinx/2025.1/Vivado/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "init_design", "begin" );
+ISETouchFile( "place_design", "begin" );
 ISEStep( "vivado",
          "-log base_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source base_wrapper.tcl -notrace" );
 
