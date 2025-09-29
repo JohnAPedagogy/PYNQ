@@ -4,10 +4,14 @@ This tutorial outlines the steps to build PetaLinux for the PYNQ-Z2 board, adapt
 
 ## Prerequisites
 
-- Linux host machine (Ubuntu 18.04/20.04 LTS recommended)
+- Linux host machine (Ubuntu 18.04/20.04 LTS recommended, Ubuntu 25.04 requires additional configuration)
 - Minimum 100GB free disk space
 - 8GB RAM minimum (16GB recommended)
 - Internet connection for downloads
+
+### Ubuntu 25.04 Compatibility Notice
+
+**Important**: If using Ubuntu 25.04, additional steps are required to resolve PetaLinux compatibility issues.
 
 ## Step 0: Download and Install AMD Vivado and PetaLinux
 
@@ -365,6 +369,235 @@ Key PYNQ-Z2 configurations:
 petalinux-build
 ```
 
+### Ubuntu 25.04 Specific Issues and Solutions
+
+#### Issue 1: User Namespace Restrictions (AppArmor)
+
+**Problem**: PetaLinux build fails with error:
+```
+ERROR: User namespaces are not usable by BitBake, possibly due to AppArmor.
+```
+
+**Cause**: Ubuntu 25.04 introduced stricter AppArmor policies that restrict unprivileged user namespaces, which BitBake (the build system used by PetaLinux) requires for secure container-like builds.
+
+**Solution**: Enable unprivileged user namespaces system-wide:
+
+```bash
+# Add kernel parameter to allow unprivileged user namespaces
+echo 'kernel.apparmor_restrict_unprivileged_userns = 0' | sudo tee -a /etc/sysctl.conf
+
+# Apply the setting immediately without reboot
+sudo sysctl -p
+
+# Verify the setting is applied
+sysctl kernel.apparmor_restrict_unprivileged_userns
+```
+
+**Expected output**: `kernel.apparmor_restrict_unprivileged_userns = 0`
+
+#### Issue 2: Host Distribution Warning
+
+**Problem**: PetaLinux shows warning:
+```
+WARNING: Host distribution "ubuntu-25.04" has not been validated with this version of the build system
+```
+
+**Cause**: PetaLinux officially supports Ubuntu 18.04/20.04 LTS. Ubuntu 25.04 is newer and not in the validated list.
+
+**Impact**: This is usually just a warning and doesn't prevent builds from completing successfully.
+
+**Action**: No action required - this warning can be safely ignored as long as the build completes successfully.
+
+#### Issue 3: Shell Compatibility Warning
+
+**Problem**: PetaLinux shows warning:
+```
+WARNING: /bin/sh is not bash! bash is PetaLinux recommended shell.
+```
+
+**Cause**: Ubuntu 25.04 uses dash (`/bin/sh`) as the default shell instead of bash.
+
+**Solution** (Optional): Set bash as the default shell:
+```bash
+# Check current default shell
+ls -la /bin/sh
+
+# If it's not bash, reconfigure (optional)
+sudo dpkg-reconfigure dash
+# Choose "No" when asked if you want to install dash as /bin/sh
+```
+
+**Note**: This warning usually doesn't prevent builds from succeeding and can be ignored.
+
+#### Complete Ubuntu 25.04 Setup Sequence
+
+For Ubuntu 25.04 users, follow this sequence after PetaLinux installation:
+
+```bash
+# 1. Enable user namespaces
+echo 'kernel.apparmor_restrict_unprivileged_userns = 0' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+
+# 2. Verify the setting
+sysctl kernel.apparmor_restrict_unprivileged_userns
+
+# 3. Proceed with normal PetaLinux workflow
+source /opt/ptx/settings.sh
+petalinux-build
+```
+
+#### Verification Steps
+
+After applying the fixes, verify PetaLinux can build successfully:
+
+```bash
+# Check that user namespaces are enabled
+sysctl kernel.apparmor_restrict_unprivileged_userns
+# Should output: kernel.apparmor_restrict_unprivileged_userns = 0
+
+# Test PetaLinux build (should progress past the user namespace error)
+source /opt/ptx/settings.sh
+petalinux-build
+```
+
+**Success indicators**:
+- No "User namespaces are not usable" error
+- Build progresses to "Loading cache...done" and "Parsing recipes"
+- BitBake server starts successfully
+
+#### Alternative Solutions (If Primary Solution Doesn't Work)
+
+If the sysctl approach doesn't work, try these alternatives:
+
+**Method 1: Temporary per-session fix**
+```bash
+# Enable for current session only
+echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
+```
+
+**Method 2: Use system containers (Advanced)**
+```bash
+# Use podman or docker to run PetaLinux in a compatible container
+# (Requires additional container setup - not covered in this tutorial)
+```
+
+**Method 3: Virtual Machine**
+```bash
+# Install Ubuntu 20.04 LTS in a virtual machine
+# Run PetaLinux in the VM environment
+```
+
+#### Security Considerations
+
+**Important**: Disabling AppArmor user namespace restrictions reduces system security by allowing unprivileged processes to create user namespaces. Consider these alternatives for production systems:
+
+1. **Use Ubuntu 20.04 LTS** for PetaLinux development (officially supported)
+2. **Use dedicated development VM** with Ubuntu 20.04 LTS
+3. **Re-enable restrictions** after PetaLinux development: `kernel.apparmor_restrict_unprivileged_userns = 1`
+
+#### Known Working Configurations
+
+✅ **Verified working combinations**:
+- Ubuntu 20.04 LTS + PetaLinux 2023.2 (Official)
+- Ubuntu 25.04 + PetaLinux 2025.1 + AppArmor fix (Community tested)
+- Ubuntu 22.04 LTS + PetaLinux 2023.2 (Community tested)
+
+❌ **Known problematic combinations**:
+- Ubuntu 25.04 + PetaLinux without AppArmor configuration
+- Ubuntu 25.04 + PetaLinux with default AppArmor policies
+- Ubuntu 25.04 + PetaLinux full build (due to QEMU glibc conflicts)
+
+#### Issue 4: QEMU Build Failures with Newer glibc
+
+**Problem**: PetaLinux full build fails with QEMU compilation error:
+```
+error: redefinition of 'struct sched_attr'
+```
+
+**Cause**: Ubuntu 25.04 uses glibc 2.41 which conflicts with QEMU's internal structure definitions. The `struct sched_attr` is already defined in newer glibc versions, causing redefinition errors during QEMU compilation.
+
+**Impact**: Prevents complete PetaLinux image build, blocking WIC file generation.
+
+**Solution 1: Component-by-Component Build**
+```bash
+# Build essential components separately to avoid QEMU dependency
+source /opt/ptx/settings.sh
+
+# Build kernel (essential for boot)
+petalinux-build -c kernel
+
+# Build U-Boot bootloader
+petalinux-build -c u-boot
+
+# Build device tree and FSBL
+petalinux-build -c device-tree
+petalinux-build -c fsbl
+
+# Check generated files
+ls -la images/linux/
+```
+
+**Solution 2: Minimal Image Build**
+```bash
+# Attempt to build minimal image without QEMU components
+source /opt/ptx/settings.sh
+petalinux-build -c core-image-minimal
+```
+
+**Verification Steps**:
+```bash
+# Check for essential boot components
+ls -la images/linux/Image          # Kernel image
+ls -la images/linux/u-boot.elf     # U-Boot bootloader
+ls -la images/linux/system.dtb     # Device tree
+ls -la images/linux/zynq_fsbl.elf  # First Stage Boot Loader
+
+# Monitor build progress
+find images/linux/ -name "*.wic" -o -name "BOOT.BIN" -o -name "boot.scr"
+```
+
+**Alternative Approach: Manual Boot File Creation**
+If full build continues to fail:
+```bash
+# Create boot files manually using available components
+source /opt/ptx/settings.sh
+
+# Package boot files if components are available
+petalinux-package --boot --fsbl ./images/linux/zynq_fsbl.elf --u-boot --force
+
+# Check for BOOT.BIN creation
+ls -la images/linux/BOOT.BIN
+```
+
+**Monitoring Strategy**:
+```bash
+# Set up continuous monitoring for build completion
+while true; do
+  echo "=== $(date) - Build Status ==="
+
+  # Check for WIC files (primary goal)
+  find images/linux/ -name "*.wic" -ls 2>/dev/null
+
+  # Check for essential components
+  [ -f "images/linux/Image" ] && echo "Kernel: Ready"
+  [ -f "images/linux/u-boot.elf" ] && echo "U-Boot: Ready"
+  [ -f "images/linux/BOOT.BIN" ] && echo "Boot image: Ready"
+
+  sleep 300  # Check every 5 minutes
+done
+```
+
+**Known Limitations**:
+- Component builds may not generate WIC files directly
+- Some PetaLinux features requiring QEMU will be unavailable
+- Full system validation may require alternative approaches
+
+**Recovery Steps**:
+If builds fail completely:
+1. Use Ubuntu 20.04 LTS in virtual machine
+2. Use Docker container with compatible environment
+3. Use pre-built PYNQ images as starting point
+
 ## Step 8: Package for Boot
 
 ```bash
@@ -565,16 +798,33 @@ sync
    - Check disk space (PetaLinux builds require significant space)
    - Verify hardware description file (.xsa) is valid
 
-2. **Boot Problems**:
+2. **Ubuntu 25.04 Specific Issues**:
+   - **User Namespace Error**: Apply AppArmor fix: `kernel.apparmor_restrict_unprivileged_userns = 0`
+   - **Host Distribution Warning**: Safe to ignore if build completes successfully
+   - **Shell Compatibility Warning**: Usually non-critical, can be ignored
+   - **QEMU glibc Conflicts**: Use component-by-component build approach
+   - See detailed solutions in Step 7 Ubuntu 25.04 section above
+
+3. **QEMU Build Failures**:
+   - **struct sched_attr redefinition**: Build components separately (`petalinux-build -c kernel`, `petalinux-build -c u-boot`)
+   - **glibc version conflicts**: Avoid full build, use targeted component builds
+   - **Alternative**: Use manual boot file packaging with available components
+
+4. **Boot Problems**:
    - Check SD card partitioning and file copying
    - Verify boot mode jumpers are set correctly
    - Ensure UART connection for debugging output
    - Check power supply stability
 
-3. **PYNQ-Z2 Specific Issues**:
+4. **PYNQ-Z2 Specific Issues**:
    - Verify correct part number (XC7Z020-1CLG400C) in Vivado
    - Check memory configuration matches PYNQ-Z2 specs
    - Ensure peripheral pin assignments are correct
+
+5. **Version Compatibility Issues**:
+   - Use matching Vivado/PetaLinux versions (e.g., both 2023.2)
+   - For PYNQ repository: Use Vivado 2024.2 for compatibility with existing TCL scripts
+   - If version mismatch errors occur, consider regenerating project files
 
 ## Key Differences from Custom Board
 

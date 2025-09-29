@@ -1,0 +1,5 @@
+PETALINUX_VER=2025.1
+HARDWARE_PATH=/home/its/tools/yocto/petal/pynq/boards/Pynq-Z2/base/base_fresh.xsa
+HDF_EXT=xsa
+VALIDATE_HW_CHKSUM=1
+YOCTO_SDK=a6136e328eca279b99669c1f4c28476553dcbedfd06649fd3dba55b83fbc8491

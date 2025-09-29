@@ -1,0 +1,40 @@
+2025-09-28 13:53:05,609 - [DEBUG] Using xsct from : /opt/ptx/components/xsct/bin/xsct
+2025-09-28 13:53:05,610 - [INFO] Getting Platform info from HW file
+2025-09-28 13:53:05,610 - [DEBUG] Using the soc_family specified by user:zynq
+2025-09-28 13:53:05,611 - [INFO] Generating Kconfig for project
+2025-09-28 13:53:05,611 - [DEBUG] Generating System HW file
+2025-09-28 13:53:05,611 - [DEBUG] xsct -sdx -nodisp /home/its/tools/yocto/petal/pynq/pynq_z2_petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/hw-description.tcl plnx_gen_hwsysconf /home/its/tools/yocto/petal/pynq/pynq_z2_petalinux/project-spec/hw-description/system.xsa
+2025-09-28 13:53:11,544 - [ERROR] 
+
+****** Software Commandline Tool (XSCT) v2025.1.0
+  **** SW Build 6135694 on Thu May 15 18:54:54 MDT 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+WARNING: sdtgen package cannot be loaded. System Device tree commands will not 
+ be available
+
+WARNING: Failed in finding /opt/ptx/components/xsct/data/system-device-tree-xlnx/device_tree/data/device_tree.tcl path.
+ERROR: [HDF 64-4] /home/its/tools/yocto/petal/pynq/pynq_z2_petalinux/project-spec/hw-description/system.xsa is not valid Hardware Handoff File
+ERROR: [Hsi 55-1451] Error: running open_hw_design.
+Failed to open hardware design from /home/its/tools/yocto/petal/pynq/pynq_z2_petalinux/project-spec/hw-description/system.xsa
+    while executing
+"error "Failed to open hardware design from ${hdf}""
+    (procedure "plnx_gen_hwsysconf" line 8)
+    invoked from within
+"${tclproc} ${cmdline}"
+    invoked from within
+"if { "[info procs ${tclproc}]" eq "${tclproc}"} {
+	${tclproc} ${cmdline}
+} else {
+	error "proc ${tclproc} doesn't exit."
+}"
+    (file "/home/its/tools/yocto/petal/pynq/pynq_z2_petalinux/components/yocto/layers/meta-xilinx/meta-xilinx-core/gen-machine-conf/gen-machine-scripts/hw-descri..." line 805)
+
+
+2025-09-28 13:53:11,548 - [DEBUG] Shutting down bitbake
