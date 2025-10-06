@@ -615,6 +615,382 @@ This creates `BOOT.BIN` in the `images/linux/` directory containing:
 - Bitstream file
 - U-Boot bootloader
 
+## Step 8b: Generate WIC Image (Complete SD Card Image)
+
+WIC (Wic Image Creator) files are complete, bootable SD card images that combine boot partition and root filesystem. They can be directly written to SD cards using tools like `dd` or Etcher.
+
+### Why Use WIC Images?
+
+**Traditional Method**:
+```
+1. Partition SD card (FAT32 + ext4)
+2. Copy BOOT.BIN, image.ub to boot partition
+3. Extract rootfs.tar.gz to rootfs partition
+4. Configure fstab, boot files
+Total: ~15 minutes, error-prone
+```
+
+**WIC Image Method**:
+```
+1. Write WIC file to SD card with dd
+Total: ~3 minutes, reliable
+```
+
+### WIC File Benefits
+
+- ✅ **One-step deployment**: Single command to write bootable SD card
+- ✅ **Reproducible**: Same image every time
+- ✅ **Distribution-ready**: Easy to share and deploy
+- ✅ **Includes everything**: Boot files + rootfs + partitioning
+- ✅ **Verified layout**: Tested partition structure
+
+### Option 1: Enable WIC Generation in Build Configuration
+
+This is the **recommended approach** as WIC files are generated automatically during `petalinux-build`.
+
+#### 1. Remove QEMU Skip (If Present)
+
+If you previously skipped QEMU due to compilation issues:
+
+```bash
+cd /path/to/petalinux/project
+
+# Edit petalinuxbsp.conf
+nano project-spec/meta-user/conf/petalinuxbsp.conf
+```
+
+Remove or comment out this line if present:
+```bash
+# ASSUME_PROVIDED += "qemu-native"   # Remove this line
+```
+
+**Note**: QEMU is required for WIC generation. If you're on Ubuntu 25.04 and QEMU fails to compile, apply the QEMU fix from the troubleshooting section first.
+
+#### 2. Enable WIC Image Format
+
+Add WIC to the image formats:
+
+```bash
+# Add to petalinuxbsp.conf
+echo 'IMAGE_FSTYPES += "wic wic.bmap wic.bz2"' >> project-spec/meta-user/conf/petalinuxbsp.conf
+```
+
+**Format Options**:
+- `wic` - Uncompressed WIC image (~2GB)
+- `wic.bmap` - Block map for faster writing with `bmaptool`
+- `wic.bz2` - Compressed WIC image (~500MB, slower to write)
+- `wic.gz` - Gzip compressed (~600MB)
+
+#### 3. Configure WIC Layout (Optional)
+
+PetaLinux uses a default WIC layout, but you can customize it:
+
+```bash
+# Create custom WIC file
+mkdir -p project-spec/meta-user/wic
+nano project-spec/meta-user/wic/sdimage-bootpart.wks
+```
+
+Example WIC kickstart file (`sdimage-bootpart.wks`):
+```
+# Short-description: Create SD card image with boot and rootfs partitions
+# Long-description: Creates a partitioned SD card image for Zynq boards
+
+# Boot partition (FAT32, 100MB)
+part /boot --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot --active --align 4096 --size 100M
+
+# Root filesystem partition (ext4, remaining space)
+part / --source rootfs --ondisk mmcblk0 --fstype=ext4 --label rootfs --align 4096
+
+bootloader --ptable msdos
+```
+
+To use custom WIC file:
+```bash
+echo 'WKS_FILE = "sdimage-bootpart.wks"' >> project-spec/meta-user/conf/petalinuxbsp.conf
+```
+
+#### 4. Rebuild with WIC Generation
+
+```bash
+# Clean previous build (optional, but recommended)
+petalinux-build -x mrproper
+
+# Rebuild with WIC generation enabled
+petalinux-build
+```
+
+#### 5. Verify WIC File Generation
+
+```bash
+# Check for WIC files
+ls -lh images/linux/*.wic*
+
+# Expected output:
+# -rw-r--r-- 1 user user 2.0G Oct 06 18:30 petalinux-image-minimal-zynq-generic.wic
+# -rw-r--r-- 1 user user  50K Oct 06 18:30 petalinux-image-minimal-zynq-generic.wic.bmap
+# -rw-r--r-- 1 user user 500M Oct 06 18:30 petalinux-image-minimal-zynq-generic.wic.bz2
+```
+
+### Option 2: Manual WIC Creation (Post-Build)
+
+If you already have a completed build and want to generate WIC without rebuilding:
+
+#### Method A: Using petalinux-package
+
+```bash
+cd /path/to/petalinux/project
+
+# Create boot files first (if not already done)
+petalinux-package --boot --fsbl images/linux/zynq_fsbl.elf --u-boot --force
+
+# Generate WIC image
+petalinux-package --wic --images-dir images/linux/ \
+  --bootfiles "BOOT.BIN boot.scr image.ub"
+```
+
+**Explanation**:
+- `--wic`: Specifies WIC image creation
+- `--images-dir`: Directory containing build outputs
+- `--bootfiles`: List of files to include in boot partition
+
+#### Method B: Using wic Command Directly
+
+```bash
+# Source PetaLinux environment
+source /opt/PetaLinux/petalinux-v2023.2/settings.sh
+
+# Navigate to build directory
+cd /path/to/petalinux/project/build/tmp
+
+# Create WIC image using default kickstart
+wic create sdimage-bootpart \
+  -e petalinux-image-minimal \
+  -o /path/to/output/
+```
+
+#### Method C: Custom Manual WIC Creation
+
+```bash
+# Create temporary WIC work directory
+mkdir -p /tmp/wic-work
+
+# Create WIC kickstart file
+cat > /tmp/wic-work/custom.wks << 'EOF'
+part /boot --source bootimg-partition --ondisk mmcblk0 --fstype=vfat --label boot --active --align 4096 --size 100M
+part / --source rootfs --ondisk mmcblk0 --fstype=ext4 --label rootfs --align 4096
+bootloader --ptable msdos
+EOF
+
+# Run WIC with custom kickstart
+wic create /tmp/wic-work/custom.wks \
+  -e petalinux-image-minimal \
+  --rootfs-dir=images/linux/rootfs \
+  --bootimg-dir=images/linux/ \
+  -o images/linux/
+```
+
+### Option 3: WIC from Separate Components
+
+If you built components separately (kernel, u-boot, etc.) and want to create WIC:
+
+```bash
+cd /path/to/petalinux/project
+
+# Ensure all components are built
+petalinux-build -c fsbl
+petalinux-build -c u-boot
+petalinux-build -c kernel
+petalinux-build -c device-tree
+petalinux-build -c rootfs
+
+# Package boot files
+petalinux-package --boot \
+  --fsbl images/linux/zynq_fsbl.elf \
+  --u-boot images/linux/u-boot.elf \
+  --force
+
+# Create WIC manually
+petalinux-package --wic \
+  --images-dir images/linux/ \
+  --bootfiles "BOOT.BIN image.ub boot.scr"
+```
+
+### Writing WIC Image to SD Card
+
+Once you have a WIC file, write it to SD card:
+
+#### Option A: Using dd (Linux/macOS)
+
+```bash
+# Find SD card device
+lsblk
+# Look for your SD card (e.g., /dev/sdb or /dev/mmcblk0)
+
+# Unmount any mounted partitions
+sudo umount /dev/sdX*
+
+# Write WIC image
+sudo dd if=images/linux/petalinux-image-minimal-zynq-generic.wic \
+  of=/dev/sdX \
+  bs=4M \
+  status=progress \
+  conv=fsync
+
+# Sync filesystem
+sync
+```
+
+**⚠️ Warning**: Double-check device name! Wrong device will destroy data.
+
+#### Option B: Using bmaptool (Faster, Recommended)
+
+```bash
+# Install bmaptool
+sudo apt install bmap-tools
+
+# Write with block map (much faster)
+sudo bmaptool copy \
+  images/linux/petalinux-image-minimal-zynq-generic.wic.bz2 \
+  /dev/sdX
+```
+
+**Benefits of bmaptool**:
+- Only writes used blocks (10x faster)
+- Built-in verification
+- Works with compressed images
+
+#### Option C: Using Etcher (GUI, Cross-platform)
+
+1. Download from https://www.balena.io/etcher/
+2. Select WIC file
+3. Select SD card
+4. Click "Flash!"
+
+### Verifying WIC Image
+
+After creating WIC file, verify its contents:
+
+```bash
+# Check WIC file size (should be ~2GB for typical build)
+ls -lh images/linux/*.wic
+
+# List partitions in WIC image
+wic ls images/linux/petalinux-image-minimal-zynq-generic.wic
+
+# Expected output:
+# Num     Start        End          Size      Fstype
+#  1       4096      204799       200704       fat16
+#  2     204800     4194303      3989504       ext4
+
+# Check boot partition contents
+wic ls images/linux/petalinux-image-minimal-zynq-generic.wic:1
+
+# Expected output:
+# BOOT.BIN
+# boot.scr
+# image.ub
+```
+
+### Troubleshooting WIC Generation
+
+#### Error: "wic command not found"
+
+**Solution**: Ensure PetaLinux environment is sourced:
+```bash
+source /opt/PetaLinux/petalinux-v2023.2/settings.sh
+petalinux-build
+```
+
+#### Error: "QEMU required for WIC generation"
+
+**Solution**: Ensure QEMU is built successfully. On Ubuntu 25.04, apply QEMU fix:
+```bash
+# See troubleshooting section for complete QEMU fix
+petalinux-build -c qemu-xilinx-native
+```
+
+#### Error: "No space left on device"
+
+**Solution**: WIC generation requires temporary space (~4GB):
+```bash
+# Check disk space
+df -h /tmp
+
+# Clean up if needed
+rm -rf build/tmp/work/*/petalinux-image-minimal/*/deploy-wic*
+petalinux-build -x cleansstate
+```
+
+#### WIC File Too Large
+
+**Solution**: Use compressed format or minimal rootfs:
+```bash
+# Use compressed WIC
+IMAGE_FSTYPES = "wic.bz2"
+
+# Or reduce rootfs size
+petalinux-config -c rootfs
+# Deselect unnecessary packages
+```
+
+#### Boot Partition Files Missing
+
+**Solution**: Ensure BOOT.BIN is created before WIC generation:
+```bash
+# Package boot files first
+petalinux-package --boot \
+  --fsbl images/linux/zynq_fsbl.elf \
+  --u-boot \
+  --force
+
+# Then generate WIC
+petalinux-build -c petalinux-image-minimal -f
+```
+
+### WIC vs Manual SD Card Preparation
+
+| Aspect | WIC Image | Manual Preparation |
+|--------|-----------|-------------------|
+| **Time** | 3 minutes | 15 minutes |
+| **Steps** | 1 (dd command) | 5-7 steps |
+| **Errors** | Rare | Common (partitioning, fstab) |
+| **Reproducibility** | Perfect | Variable |
+| **Sharing** | Easy (single file) | Complex (multiple files) |
+| **Production** | Ideal | Not recommended |
+
+### Best Practices
+
+1. **Always generate WIC.bz2**: Compressed images save bandwidth and storage
+2. **Keep WIC.bmap**: Enables fast flashing with bmaptool
+3. **Test WIC images**: Boot test before distribution
+4. **Version WIC files**: Include version in filename
+5. **Document custom WIC**: If using custom .wks files, document changes
+
+### Production WIC Workflow
+
+```bash
+# Complete production WIC generation workflow
+
+# 1. Configure for WIC generation
+echo 'IMAGE_FSTYPES += "wic wic.bmap wic.bz2"' >> project-spec/meta-user/conf/petalinuxbsp.conf
+
+# 2. Build with WIC enabled
+petalinux-build
+
+# 3. Verify WIC generation
+ls -lh images/linux/*.wic*
+
+# 4. Test WIC image
+sudo bmaptool copy images/linux/*.wic.bz2 /dev/sdX
+# Boot test on PYNQ-Z2
+
+# 5. Archive for distribution
+mv images/linux/*.wic.bz2 pynq-z2-v1.0-$(date +%Y%m%d).wic.bz2
+mv images/linux/*.wic.bmap pynq-z2-v1.0-$(date +%Y%m%d).wic.bmap
+sha256sum pynq-z2-v1.0-*.wic.bz2 > pynq-z2-v1.0.sha256
+```
+
 ## PYNQ Build Outputs and Locations
 
 ### Primary Build Outputs

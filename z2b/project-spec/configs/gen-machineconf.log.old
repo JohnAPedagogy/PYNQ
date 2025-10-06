@@ -1,14 +1,14 @@
-2025-10-06 16:48:19,049 - [DEBUG] Using xsct from : /home/its/tools/yocto/ptx/components/xsct/bin/xsct
-2025-10-06 16:48:19,049 - [INFO] Getting Platform info from HW file
-2025-10-06 16:48:19,049 - [DEBUG] Using the soc_family specified by user:zynq
-2025-10-06 16:48:19,070 - [DEBUG] Hardware Configuration:
-2025-10-06 16:48:19,071 - [DEBUG] MACHINE     = "None"
-2025-10-06 16:48:19,071 - [DEBUG] DEVICE_ID   = "7z020"
-2025-10-06 16:48:19,071 - [DEBUG] SOC_FAMILY  = "zynq"
-2025-10-06 16:48:19,071 - [DEBUG] SOC_VARIANT = ""
-2025-10-06 16:48:19,071 - [INFO] Silentconfig project
-2025-10-06 16:48:19,071 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/config conf /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/configs/Kconfig
-2025-10-06 16:48:19,083 - [DEBUG] *
+2025-10-06 17:08:05,287 - [DEBUG] Using xsct from : /home/its/tools/yocto/ptx/components/xsct/bin/xsct
+2025-10-06 17:08:05,287 - [INFO] Getting Platform info from HW file
+2025-10-06 17:08:05,287 - [DEBUG] Using the soc_family specified by user:zynq
+2025-10-06 17:08:05,316 - [DEBUG] Hardware Configuration:
+2025-10-06 17:08:05,316 - [DEBUG] MACHINE     = "None"
+2025-10-06 17:08:05,316 - [DEBUG] DEVICE_ID   = "7z020"
+2025-10-06 17:08:05,317 - [DEBUG] SOC_FAMILY  = "zynq"
+2025-10-06 17:08:05,317 - [DEBUG] SOC_VARIANT = ""
+2025-10-06 17:08:05,317 - [INFO] Silentconfig project
+2025-10-06 17:08:05,317 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/config conf /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/configs/Kconfig
+2025-10-06 17:08:05,328 - [DEBUG] *
 * PetaLinux System Configuration
 *
 ZYNQ Configuration (SYSTEM_ZYNQ) [Y/?] y
@@ -249,9 +249,9 @@ user layer 0 (USER_LAYER_0) []
 #
 # configuration written to /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/config
 #
-2025-10-06 16:48:19,144 - [INFO] Silentconfig rootfs
-2025-10-06 16:48:19,144 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfs_config conf /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfsconfigs/Kconfig
-2025-10-06 16:48:19,166 - [DEBUG] *
+2025-10-06 17:08:05,388 - [INFO] Silentconfig rootfs
+2025-10-06 17:08:05,388 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfs_config conf /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfsconfigs/Kconfig
+2025-10-06 17:08:05,413 - [DEBUG] *
 * Configuration
 *
 *
@@ -3531,7 +3531,7 @@ Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux]
 #
 # configuration written to /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfs_config
 #
-2025-10-06 16:48:19,172 - [INFO] Generating configuration files
-2025-10-06 16:48:19,174 - [DEBUG] No multilibs enabled.
-2025-10-06 16:48:19,174 - [DEBUG] No multilibs enabled.
-2025-10-06 16:48:19,198 - [DEBUG] Shutting down bitbake
+2025-10-06 17:08:05,420 - [INFO] Generating configuration files
+2025-10-06 17:08:05,422 - [DEBUG] No multilibs enabled.
+2025-10-06 17:08:05,422 - [DEBUG] No multilibs enabled.
+2025-10-06 17:08:05,439 - [DEBUG] Shutting down bitbake
