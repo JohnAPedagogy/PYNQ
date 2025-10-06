@@ -2,6 +2,7 @@
 */*/config.old
 */*/rootfs_config.old
 tmp/
+cache/
 images/linux/
 pre-built/linux/
 .petalinux/*
