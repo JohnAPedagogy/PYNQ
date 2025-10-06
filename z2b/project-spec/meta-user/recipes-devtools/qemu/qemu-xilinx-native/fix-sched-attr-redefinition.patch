@@ -1,0 +1,40 @@
+From: Claude <noreply@anthropic.com>
+Subject: [PATCH] linux-user: Fix struct sched_attr redefinition on glibc >= 2.40
+Date: 2025-10-06
+
+Fix compilation error on Ubuntu 25.04 and other systems with glibc >= 2.40
+where struct sched_attr is already defined in <linux/sched/types.h>.
+
+The error occurs because QEMU defines the struct with a comment saying
+it's "not defined in glibc", but newer glibc versions now include it.
+
+This patch conditionally defines the struct only if __GLIBC__ < 2 or
+(__GLIBC__ == 2 && __GLIBC_MINOR__ < 40).
+
+Upstream-Status: Pending
+
+Signed-off-by: Claude <noreply@anthropic.com>
+
+--- a/linux-user/syscall.c
++++ b/linux-user/syscall.c
+@@ -361,7 +361,11 @@
+ #define __NR_sys_sched_setaffinity __NR_sched_setaffinity
+ _syscall3(int, sys_sched_setaffinity, pid_t, pid, unsigned int, len,
+           unsigned long *, user_mask_ptr);
+-/* sched_attr is not defined in glibc */
++/* sched_attr is not defined in glibc < 2.40 */
++#if !defined(__GLIBC__) || \
++    (__GLIBC__ < 2) || \
++    (__GLIBC__ == 2 && __GLIBC_MINOR__ < 40)
++/* Define struct sched_attr for older glibc versions */
+ struct sched_attr {
+     uint32_t size;
+     uint32_t sched_policy;
+@@ -374,6 +378,7 @@ struct sched_attr {
+     uint32_t sched_util_min;
+     uint32_t sched_util_max;
+ };
++#endif
+ #define __NR_sys_sched_getattr __NR_sched_getattr
+ _syscall4(int, sys_sched_getattr, pid_t, pid, struct sched_attr *, attr,
+           unsigned int, size, unsigned int, flags);

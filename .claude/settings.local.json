@@ -37,7 +37,8 @@
       "Bash(curl:*)",
       "Bash(sudo gpg:*)",
       "Bash(docker:*)",
-      "Bash(newgrp:*)"
+      "Bash(newgrp:*)",
+      "Bash(sudo docker build:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,14 +1,14 @@
-2025-10-05 03:58:13,782 - [DEBUG] Using xsct from : /home/its/tools/yocto/ptx/components/xsct/bin/xsct
-2025-10-05 03:58:13,783 - [INFO] Getting Platform info from HW file
-2025-10-05 03:58:13,783 - [DEBUG] Using the soc_family specified by user:zynq
-2025-10-05 03:58:13,834 - [DEBUG] Hardware Configuration:
-2025-10-05 03:58:13,834 - [DEBUG] MACHINE     = "None"
-2025-10-05 03:58:13,834 - [DEBUG] DEVICE_ID   = "7z020"
-2025-10-05 03:58:13,834 - [DEBUG] SOC_FAMILY  = "zynq"
-2025-10-05 03:58:13,834 - [DEBUG] SOC_VARIANT = ""
-2025-10-05 03:58:13,834 - [INFO] Silentconfig project
-2025-10-05 03:58:13,834 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/boards/Pynq-Z2/base/pynq_z2_petalinux_fresh/project-spec/configs/config conf /home/its/tools/yocto/petal/pynq/boards/Pynq-Z2/base/pynq_z2_petalinux_fresh/project-spec/configs/configs/Kconfig
-2025-10-05 03:58:13,940 - [DEBUG] *
+2025-10-06 16:48:19,049 - [DEBUG] Using xsct from : /home/its/tools/yocto/ptx/components/xsct/bin/xsct
+2025-10-06 16:48:19,049 - [INFO] Getting Platform info from HW file
+2025-10-06 16:48:19,049 - [DEBUG] Using the soc_family specified by user:zynq
+2025-10-06 16:48:19,070 - [DEBUG] Hardware Configuration:
+2025-10-06 16:48:19,071 - [DEBUG] MACHINE     = "None"
+2025-10-06 16:48:19,071 - [DEBUG] DEVICE_ID   = "7z020"
+2025-10-06 16:48:19,071 - [DEBUG] SOC_FAMILY  = "zynq"
+2025-10-06 16:48:19,071 - [DEBUG] SOC_VARIANT = ""
+2025-10-06 16:48:19,071 - [INFO] Silentconfig project
+2025-10-06 16:48:19,071 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/config conf /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/configs/Kconfig
+2025-10-06 16:48:19,083 - [DEBUG] *
 * PetaLinux System Configuration
 *
 ZYNQ Configuration (SYSTEM_ZYNQ) [Y/?] y
@@ -203,8 +203,8 @@ Copy final images to tftpboot (SUBSYSTEM_COPY_TO_TFTPBOOT) [Y/n/?]
 *
 * Firmware Version Configuration
 *
-Host name (SUBSYSTEM_HOSTNAME) [pynq_z2_petalinux_fresh] 
-Product name (SUBSYSTEM_PRODUCT) [pynq_z2_petalinux_fresh] 
+Host name (SUBSYSTEM_HOSTNAME) [z2b] 
+Product name (SUBSYSTEM_PRODUCT) [z2b] 
 Firmware Version (SUBSYSTEM_FW_VERSION) [1.00] 
 *
 * Yocto Settings
@@ -247,11 +247,11 @@ Enable Buildtools Extended (YOCTO_BUILDTOOLS_EXTENDED) [N/y/?]
 *
 user layer 0 (USER_LAYER_0) [] 
 #
-# configuration written to /home/its/tools/yocto/petal/pynq/boards/Pynq-Z2/base/pynq_z2_petalinux_fresh/project-spec/configs/config
+# configuration written to /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/config
 #
-2025-10-05 03:58:14,002 - [INFO] Silentconfig rootfs
-2025-10-05 03:58:14,002 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/boards/Pynq-Z2/base/pynq_z2_petalinux_fresh/project-spec/configs/rootfs_config conf /home/its/tools/yocto/petal/pynq/boards/Pynq-Z2/base/pynq_z2_petalinux_fresh/project-spec/configs/rootfsconfigs/Kconfig
-2025-10-05 03:58:14,026 - [DEBUG] *
+2025-10-06 16:48:19,144 - [INFO] Silentconfig rootfs
+2025-10-06 16:48:19,144 - [DEBUG] Running CMD: yes "" | env KCONFIG_CONFIG=/home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfs_config conf /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfsconfigs/Kconfig
+2025-10-06 16:48:19,166 - [DEBUG] *
 * Configuration
 *
 *
@@ -3529,9 +3529,9 @@ Create new Groups (CREATE_NEW_GROUPS) [aie;]
 Add Users to Groups (ADD_USERS_TO_GROUPS) [petalinux:audio,video,aie,input;] 
 Add Users to Sudo users (ADD_USERS_TO_SUDOERS) [petalinux] 
 #
-# configuration written to /home/its/tools/yocto/petal/pynq/boards/Pynq-Z2/base/pynq_z2_petalinux_fresh/project-spec/configs/rootfs_config
+# configuration written to /home/its/tools/yocto/petal/pynq/z2b/project-spec/configs/rootfs_config
 #
-2025-10-05 03:58:14,040 - [INFO] Generating configuration files
-2025-10-05 03:58:14,041 - [DEBUG] No multilibs enabled.
-2025-10-05 03:58:14,041 - [DEBUG] No multilibs enabled.
-2025-10-05 03:58:14,061 - [DEBUG] Shutting down bitbake
+2025-10-06 16:48:19,172 - [INFO] Generating configuration files
+2025-10-06 16:48:19,174 - [DEBUG] No multilibs enabled.
+2025-10-06 16:48:19,174 - [DEBUG] No multilibs enabled.
+2025-10-06 16:48:19,198 - [DEBUG] Shutting down bitbake

@@ -24,9 +24,10 @@ thumbs.db
 ######################
 *.swp
 
-# Build directory
+# Build directory exclusions
 ######################
-build/
+# Allow build/ directories but exclude tmp/
+tmp/
 sdcard/
 
 # Raw overlay files

@@ -156,24 +156,60 @@ This document tracks the progress of building the PYNQ Z2 board base design XSA 
 - [x] Verify setting applied: `sysctl kernel.apparmor_restrict_unprivileged_userns` (Output: 0)
 - [x] Resolve PetaLinux build compatibility for Ubuntu 25.04
 
-### QEMU Build Issue Resolution (Ubuntu 25.04 glibc 2.41 Conflict)
+### QEMU Build Issue Resolution (Ubuntu 25.04 glibc 2.41 Conflict) - ✅ RESOLVED
 - [x] Identify QEMU compilation failure: `struct sched_attr` redefinition error
-- [x] Root cause analysis: Ubuntu 25.04 glibc 2.41 conflicts with QEMU internal structures
-- [x] Implement workaround: Component-by-component build approach
-- [x] Start kernel build: `petalinux-build -c kernel` (FAILED - QEMU dependency)
-- [x] Start U-Boot build: `petalinux-build -c u-boot` (FAILED - QEMU dependency)
-- [x] Set up monitoring script for build completion and WIC file detection
-- [x] **Alternative Solution**: Build individual components without QEMU
-- [x] Successfully build FSBL: `petalinux-build -c fsbl` (✅ 403KB)
-- [x] Successfully build device tree: `petalinux-build -c device-tree` (✅ 20KB)
-- [x] Successfully package boot image: `petalinux-package --boot --fsbl` (✅ 104KB BOOT.BIN)
+- [x] Root cause analysis: Ubuntu 25.04 glibc 2.41+ defines `struct sched_attr` in `/usr/include/linux/sched/types.h`, conflicting with QEMU 8.2.7 definition
+- [x] Create patch to conditionally define struct based on glibc version
+- [x] Create patch directory: `project-spec/meta-user/recipes-devtools/qemu/qemu-xilinx-native/`
+- [x] Write patch file: `fix-sched-attr-redefinition.patch` with glibc version check
+- [x] Create bbappend: `qemu-xilinx-native_8.2.7.bbappend` to apply patch
+- [x] Clean QEMU build state: `petalinux-build -c qemu-xilinx-native -x cleansstate`
+- [x] **Successfully compiled QEMU**: `petalinux-build -c qemu-xilinx-native` completed without errors
+- [x] **Fix verified**: Patch conditionally defines `struct sched_attr` only for glibc < 2.40
+- [x] **Documentation updated**: Added detailed fix to `tutorial01.md` with complete patch and procedure
+- [x] **Ready for full build**: QEMU compilation issue completely resolved
 
-### Build Process
+### Build Process - XSCT Issues Identified ⚠️
 - [x] Attempt full system build: `petalinux-build` (FAILED - QEMU glibc conflict)
 - [x] Switch to component builds to avoid QEMU dependency
-- [ ] Monitor component builds for completion
-- [ ] Check for WIC file generation or alternative boot files
-- [ ] Verify successful completion of essential components
+- [x] Apply QEMU skip workaround in petalinuxbsp.conf: `ASSUME_PROVIDED += "qemu-native"`
+- [x] Fix missing XSA file: Copied system.xsa to z2ptx project-spec/hw-description/
+- [x] Fix device-tree workspace: Copied plnx_workspace from fresh project
+- [x] Retry full system build with fixes applied (FAILED - xsct not found)
+- [x] **ROOT CAUSE IDENTIFIED**: Project uses deprecated XSCT workflow throughout
+- [x] Create dummy FSBL provider and device-tree overrides (workarounds)
+- [x] **RECOMMENDATION**: Start fresh with SDT workflow instead of patching
+
+### ⚠️ CRITICAL DECISION POINT: Migration Path
+
+**Problem:** Current project (`z2ptx`) has pervasive XSCT dependencies in:
+- device-tree generation
+- fsbl-firmware builds
+- pmu-firmware builds
+- Multiple other recipes
+
+**Two Options Available:**
+
+#### Option 1: Fresh SDT-based Project ⭐ **RECOMMENDED**
+- [x] Created automated script: `create_sdt_project.sh`
+- [x] Script creates new project with modern SDT workflow
+- [x] No XSCT dependencies - officially supported approach
+- [x] Estimated time: 30 min setup + 2-4 hours build
+- [ ] **ACTION NEEDED**: Run `./create_sdt_project.sh` to create clean project
+- [ ] Build new project with `petalinux-build`
+- [ ] Verify WIC image generation
+
+#### Option 2: Fix Current Project (Not Recommended)
+- [x] Created fix script: `fix_xsct_dependencies.sh`
+- [x] Applies workarounds (dummy FSBL, device-tree overrides)
+- [x] **WARNING**: Fragile, unsupported, may not boot
+- [ ] Only use for quick testing, not production
+
+### Documentation Created
+- [x] **XSCT_MIGRATION_GUIDE.md**: Comprehensive comparison of both options
+- [x] **SDT_WORKFLOW_GUIDE.md**: Detailed SDT workflow explanation
+- [x] **create_sdt_project.sh**: Automated SDT project creation
+- [x] **fix_xsct_dependencies.sh**: Current project fix script (fallback)
 
 ## Step 8: Package for Boot
 - [x] **Successfully Created boot image**: `petalinux-package --boot --fsbl ./images/linux/zynq_fsbl.elf --force`
@@ -257,6 +293,19 @@ This document tracks the progress of building the PYNQ Z2 board base design XSA 
 - 🔄 **Currently Building**: `petalinux-build` running successfully in background
 - 🎯 **Next Steps**: Complete build → Package boot files → Deploy to SD card
 
+## Documentation Updates
+
+### TFTP Network Boot Documentation - ✅ ADDED
+- [x] Added comprehensive Step 9b to tutorial01.md explaining TFTP network boot
+- [x] Documented why PetaLinux copies images to `/tftpboot`
+- [x] Complete setup guide for TFTP server on host PC
+- [x] U-Boot configuration instructions for network boot
+- [x] Development workflow comparison (SD card vs TFTP)
+- [x] Advanced NFS root filesystem setup
+- [x] Network boot troubleshooting section
+- [x] Security warnings and best practices
+- [x] Cross-references added to Step 7 and troubleshooting sections
+
 ---
-**Last Updated**: 2025-09-28
+**Last Updated**: 2025-10-06
 **Updated By**: Claude Code Assistant

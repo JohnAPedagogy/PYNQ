@@ -1,0 +1,4 @@
+SANITY_VERSION 1
+TMPDIR /home/its/tools/yocto/petal/pynq/z2b/build/tmp
+SSTATE_DIR /home/its/tools/yocto/petal/pynq/z2ptx/build/sstate-cache
+NATIVELSBSTRING ubuntu-25.04
