@@ -1,0 +1,25 @@
+[INFO] File in BOOT BIN: "/home/its/tools/yocto/petal/pynq/z2b/images/linux/zynq_fsbl.elf"
+[INFO] File in BOOT BIN: "/home/its/tools/yocto/petal/pynq/z2b/images/linux/u-boot.elf"
+[INFO] File in BOOT BIN: "/home/its/tools/yocto/petal/pynq/z2b/images/linux/system.dtb"
+[DEBUG] the_ROM_image:
+{
+	[bootloader] /home/its/tools/yocto/petal/pynq/z2b/images/linux/zynq_fsbl.elf
+	/home/its/tools/yocto/petal/pynq/z2b/images/linux/u-boot.elf
+	[load=0x100000] /home/its/tools/yocto/petal/pynq/z2b/images/linux/system.dtb
+}
+
+[INFO] Generating zynq binary package BOOT.BIN...
+[DEBUG] bootgen -arch zynq -image /home/its/tools/yocto/petal/pynq/z2b/images/linux/bootgen.bif -o /home/its/tools/yocto/petal/pynq/z2b/images/linux/BOOT.BIN 
+[INFO] 
+
+****** Bootgen v2025.1-Merged
+  **** Build date : Apr 26 2025-12:07:24
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+
+[INFO] Binary is ready.
+[INFO] Successfully Generated BIN File

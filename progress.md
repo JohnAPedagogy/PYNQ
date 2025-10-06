@@ -306,6 +306,21 @@ This document tracks the progress of building the PYNQ Z2 board base design XSA 
 - [x] Security warnings and best practices
 - [x] Cross-references added to Step 7 and troubleshooting sections
 
+### WIC Image Generation Documentation and Implementation - ✅ COMPLETED
+- [x] Added comprehensive Step 8b to tutorial02.md for WIC image generation
+- [x] Documented three methods: build configuration, manual creation, component-based
+- [x] Complete guide for writing WIC to SD card (dd, bmaptool, Etcher)
+- [x] WIC verification and troubleshooting procedures
+- [x] Best practices and production workflow
+- [x] **Successfully generated WIC image for z2b build**:
+  - File: `petalinux-sdimage.wic` (6.1GB)
+  - Partition 1: FAT32 boot (2GB) with BOOT.BIN, boot.scr, image.ub
+  - Partition 2: ext4 rootfs (4GB)
+  - Location: `/home/its/tools/yocto/petal/pynq/z2b/images/linux/`
+- [x] Configuration added to petalinuxbsp.conf: `IMAGE_FSTYPES += "wic wic.bmap wic.bz2"`
+- [x] BOOT.BIN successfully packaged with FSBL + U-Boot + DTB
+- [x] WIC image ready for direct SD card deployment
+
 ---
 **Last Updated**: 2025-10-06
 **Updated By**: Claude Code Assistant
